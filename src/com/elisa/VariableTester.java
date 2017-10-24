@@ -26,6 +26,20 @@ String s2 = "Hahahahaha";
 int len = s.length();
 System.out.println("int:" + len);
 System.out.println(s.charAt(0));
-	}
+
+float f = 5.0f;
+int x = 10;
+int y = 3;
+float z = f/y;
+System.out.println(z);
+
+System.out.println(x==y);
+System.out.println(x >> 1);
+x++;
+x--;
+System.out.println(x);
+x = x + 2;
+System.out.println(x);
+}
 
 }
