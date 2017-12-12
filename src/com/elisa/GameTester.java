@@ -26,7 +26,6 @@ public class GameTester {
 					System.out.println(hp = hp - 5);
 				} else {
 					System.out.println(hp = hp - 30);
-
 				}
 				break;
 
@@ -37,7 +36,6 @@ public class GameTester {
 					System.out.println(hp = hp - 5);
 				} else {
 					System.out.println(hp = hp - 30);
-
 				}
 				break;
 
@@ -48,7 +46,6 @@ public class GameTester {
 					System.out.println(hp = hp - 5);
 				} else {
 					System.out.println(hp = hp - 30);
-
 				}
 				break;
 
@@ -59,15 +56,14 @@ public class GameTester {
 					System.out.println(hp = hp - 5);
 				} else {
 					System.out.println(hp = hp - 30);
-
 				}
 				break;
 
 			}
-			if (hp < 0) {
+			if (hp <= 0) {
 				System.out.println("You Lose");
+				break;
 			}
-	
 
 		}
 	}
