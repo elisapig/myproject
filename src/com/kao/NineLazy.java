@@ -13,7 +13,6 @@ public class NineLazy {
 						System.out.print(n + "*" + i + "=" + " " + (n * i) + "\t");
 					} else {
 						System.out.print(n + "*" + i + "=" + (n * i) + "\t");
-
 					}
 				}
 

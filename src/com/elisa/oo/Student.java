@@ -7,6 +7,11 @@ public class Student {
 	int math;
 	int chinese;
 	String name;
+	static int pass =60;
+	
+	//建立空建構子
+	public Student(){
+	}
 	
 	public Student(String name,int english,int math,int chinese){
 		          //instance variable(屬性)
@@ -14,10 +19,15 @@ public class Student {
 		this.english = english;
 		this.math = math;
 		this.chinese = chinese;
+		
+		
 	}
 	public Student(String name){
 		this.name = name;
 	
+	}
+	public static void method(){
+		System.out.println("Hello");
 	}
 	public void print(){
 	System.out.println(english+"\t"+math+"\t"+chinese);
