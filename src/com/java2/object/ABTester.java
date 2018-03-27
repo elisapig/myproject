@@ -9,7 +9,7 @@ public class ABTester {
 		while(result != 40){
 			System.out.println("Please enter your guess");
 			ABNumber n = new ABNumber(scanner.nextLine());
-			result = n.validate(secret);
+			result = n.validate(secret);//validateÅçÃÒ
 			System.out.println((result/10)+"A"+(result%10)+"B");
 			
 		}
