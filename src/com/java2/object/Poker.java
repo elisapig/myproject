@@ -30,6 +30,6 @@ public class Poker {
 				System.out.println();
 			}
 		}
-		
+	
 	}
 }

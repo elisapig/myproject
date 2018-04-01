@@ -10,7 +10,7 @@ public class ListTester {
 		cards.add(26);
 		cards.add(51);
 		cards.add(19);
-		cards.add(1,99);
+		cards.set(1,99);
 		System.out.println("removing number:"+cards.remove(0));
 		System.out.println(cards.size());
 		System.out.println(cards.get(1));
