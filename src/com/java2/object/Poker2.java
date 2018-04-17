@@ -22,6 +22,7 @@ public class Poker2 {
 		for (int i = 0; i < 52; i++) {
 			int r = random.nextInt(52);
 			cards.set(i, r);
+			 
 		}
 
 	}
