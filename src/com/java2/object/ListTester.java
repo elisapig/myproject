@@ -14,6 +14,7 @@ public class ListTester {
 		System.out.println("removing number:"+cards.remove(0));
 		System.out.println(cards.size());
 		System.out.println(cards.get(1));
+		System.out.println(cards);
 		
 	}
 
