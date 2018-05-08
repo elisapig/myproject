@@ -12,7 +12,7 @@ public class MainList {
 		    for(String name:nameList){
 		    	System.out.println(name);
 		    }
-		    List<String> nameList = new ArrayList<>(Arrays.asList("Mr.Green", "Mr.Yellow", "Mr.Red"));
+		    List nameList = new ArrayList<>(Arrays.asList("Mr.Green", "Mr.Yellow", "Mr.Red"));
 
 
 		    String[] strArray = nameList.toArray(new String[0]);

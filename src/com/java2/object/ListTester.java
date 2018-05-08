@@ -13,7 +13,7 @@ public class ListTester {
 		cards.set(1,99);
 		System.out.println("removing number:"+cards.remove(0));
 		System.out.println(cards.size());
-		System.out.println(cards.get(1));
+		 
 		System.out.println(cards);
 		
 	}
