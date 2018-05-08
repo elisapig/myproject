@@ -4,10 +4,7 @@ package com.java2.collection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-//tree set 不重複依大小排序
-//Hash set 不重複不按照續 is faster than free set
-//ArrayList
-//LinkList
+
 public class MainList2 {
 
 	public static void main(String[] args) {
