@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 
 public class Tester extends JFrame {
 	
+	
 	public Tester() {
 		setSize(200, 300);
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -16,6 +17,7 @@ public class Tester extends JFrame {
 	}
 
 	public static void main(String[] args) {
+		Tester tester = new Tester();
 		System.out.println("Hello");
 		// new Tester();
 		try {
