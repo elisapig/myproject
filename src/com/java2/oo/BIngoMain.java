@@ -20,6 +20,7 @@ public class BIngoMain {
 	int count=25;
 	int row=5;
 	int col=5;
+	
 	public void BingoMain(int count) {
 		for (int i = 0; i < count; i++) {
 			numbers.add(i + 1);
@@ -30,18 +31,19 @@ public class BIngoMain {
 
 	public void print() {
 		for (int i = 0; i < count; i++) {
-			int n = numbers.get(i);
+			int n = numbers.get(i+1);
 			if(n<10){
 				System.out.print(" ");
 			}
 			System.out.print(n<10?" ":" ");
 			System.out.print(n);
-			if(i%5==0){
-				System.out.println(" ");
+			if((i+1)%5==0){
+				System.out.println();
 			}
 		}
 	}
 	public static void main(String[] args){
-		
+		BIngoMain bm = new BIngoMain();
+		bm.print();
 	}
 }
