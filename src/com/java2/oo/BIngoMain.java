@@ -31,7 +31,7 @@ public class BIngoMain {
 
 	public void print() {
 		for (int i = 0; i < count; i++) {
-			int n = numbers.get(i+1);
+			int n = numbers.get(i);
 			if(n<10){
 				System.out.print(" ");
 			}
@@ -44,6 +44,7 @@ public class BIngoMain {
 	}
 	public static void main(String[] args){
 		BIngoMain bm = new BIngoMain();
+		bm.BingoMain (25);
 		bm.print();
 	}
 }
