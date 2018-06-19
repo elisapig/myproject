@@ -14,30 +14,33 @@ package com.java2.oo;
 	 * 請輸入時(0-24):14
 	 * [有課: C004 English 到 16時]
 	 * */
-	public class Schedule {
-		List<Integer> days = new ArrayList<>();
-		int week;
-		int time;
-		String subject;
-		
-		public void schedule() {
-			System.out.println("請輸入星期:");
-			Scanner scanner = new Scanner(System.in);
-			String line = scanner.nextLine();
-			int n = Integer.parseInt(line) ;
-
-			if (n=1){
-				System.out.println("是奇數");
-			 }else{System.out.println("是偶數");
-				
-			System.out.println("請輸入時間:");
-			Scanner s = new Scanner(System.in);
-			String l = scanner.nextLine();
-		}
-		}
-		public void print() {
+	 class Main{
+		List<Course> courses = new ArrayList<>();
+		public Main(){
+			readCourses();
 			
+			Scanner scanner = new Scanner(System.in);
+			System.out.println("請輸入星期(1~7):");
+			int weekday = scanner.nextInt();
+			System.out.println("請輸入時(0~24):");
+			int hour = scanner.nextInt();
+			boolean avail = true;
+			for(Couese c : courses){
+				if(!c.isAvailable(weekday,hour)){
+					System.out.println("[有課:"+c.getId+" "+c.getName+" 到"+(c.getWeekday+c.ge);
+					avail = false;
+					break;
+				}
+			}
+		if(avail){
+			System.out.println("[有空檔]");
 		}
+			
+		
+		
+
+
+
 		public static void main(String[] args) {
 			
 			Schedule sc = new Schedule();

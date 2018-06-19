@@ -1,13 +1,18 @@
 package com.java2.snowing;
 
 import java.awt.Graphics;
+import java.util.List;
+import java.util.ArrayList;
+import java.awt.Canvas;
+
 
 import javax.swing.JFrame;
 
+//
 public class SnowFrame extends JFrame {
 	SnowCanvas canvas = new SnowCanvas();
   
-	//¶}µøµ¡
+
 	public SnowFrame(){
 		setSize(850,650);
 		setLocation(500,200);
@@ -15,7 +20,11 @@ public class SnowFrame extends JFrame {
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setVisible(true);
 	}
-	public void SnowCanvas(){
+	//
+	public class SnowCanvas extends Canvas{
+		List<Snow> snows = new ArrayList<>();
+	
+	public  SnowCanvas(){
 		for(int i=0;i<100;i++){
 			Snow snow =new Snow(SnowCanvas.this);
 			snows.add(snow);
@@ -27,7 +36,7 @@ public class SnowFrame extends JFrame {
 	public void paint(Graphics g){
 		for(int i=0;i<100;i++){
 			Snow snow = snows.get(i);
-			g.drawString("³·", snow-x, snow-y);
+			g.drawString("³·", snow.x, snow.y);
 		}
 	}
 }
