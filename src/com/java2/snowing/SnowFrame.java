@@ -1,0 +1,37 @@
+package com.java2.snowing;
+
+import java.awt.Graphics;
+
+import javax.swing.JFrame;
+
+public class SnowFrame extends JFrame {
+	SnowCanvas canvas = new SnowCanvas();
+  
+	//¶}µøµ¡
+	public SnowFrame(){
+		setSize(850,650);
+		setLocation(500,200);
+		add(canvas);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		setVisible(true);
+	}
+	public void SnowCanvas(){
+		for(int i=0;i<100;i++){
+			Snow snow =new Snow(SnowCanvas.this);
+			snows.add(snow);
+			snow.start();
+			
+		}
+	}
+	@Override
+	public void paint(Graphics g){
+		for(int i=0;i<100;i++){
+			Snow snow = snows.get(i);
+			g.drawString("³·", snow-x, snow-y);
+		}
+	}
+}
+	public static void main(String[] args){
+		new SnowFrame();
+	}
+	}

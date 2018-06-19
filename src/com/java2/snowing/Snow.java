@@ -6,6 +6,8 @@ public class Snow extends Thread {
 	Random random = new Random();
 	int x;
 	int y = 800;
+	
+	private final SnowFrame.SnaoCarvas snowCarvas;
 	public Snow(){
 		x = random.nextInt(600);
 	}
@@ -17,7 +19,7 @@ public class Snow extends Thread {
 			int movement =random.nextInt(3)-1;
 			x = x - movement;
 			System.out.print(new String(new char[x]).replace("\0"," "));
-			System.out.println("雪");
+			System.out.println("�");
 		}
 	}
 	

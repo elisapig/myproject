@@ -24,6 +24,7 @@ public class MyServer {
 						String command = tokens[0];
 						String option = tokens[1];
 						System.out.println(command+"/"+option);
+						System.out.println("Rrror!!!");
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
