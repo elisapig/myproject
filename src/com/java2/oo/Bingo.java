@@ -6,12 +6,16 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Bingo{
+	public static void main(String[] args) {
+	int ary,chsd,chsdval,tmp;
+	
+	
+	Random rd = new Random();
 	FileReader fr;
 	BufferedReader br;
 	ArrayList<Integer> ushs,bgo;
 	//使用者選中的賓果號碼,整張賓果卡
-	Random rm = new Random();
-	int ary,chsd,chsdval,tmp;
+
 	//將讀取的第一行轉進int,被選擇交換的矩陣元素編號,被選擇交換的矩陣元素數值,暫存編號i數值
 	try {
 		fr = new FileReader("bingo.txt");
@@ -28,6 +32,41 @@ public class Bingo{
 		}
 		System.out.println(uchs);
 		//int bgo[] = new int[]{};
+		bgo = new ArrayList<Integer>();
+		for(int i=1; i<ary+1;i++) {
+		bgo.add(i);
 	}
-	
+	//洗牌
+	for(int i=0;i<bgo.size();i++) {
+		chsd =rd.nextInt(ary-1);
+		chsdval = bgo.get(chsd);
+		tmp = bgo.get(i);
+		bgo.set(i, chsdval);
+		bgo.set(chsd, tmp);
+		
+		
+	}
+	for (int i = 0; i < bgo.size(); i++) {
+		int n = bgo.get(i);
+		if(n<10){
+			System.out.print(" ");
+		}
+		System.out.print(n<10?" ":" ");
+		System.out.print(n);
+		if((i+1)%5==0){
+			System.out.println();
+		
+	}
+	}
+	System.out.println(bgo.indexOf(uchs.get(0)));
+	String[] ar = br.readLine().split(",");
+	}catch(Exception e) {
+		System.out.println(e);
+	}
+	}
+	private static int bgo(int index) {
+
+		return 0;
+
+}
 }
