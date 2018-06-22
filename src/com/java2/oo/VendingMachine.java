@@ -16,11 +16,12 @@ public class VendingMachine {
 
 		Scanner scanner = new Scanner(System.in);
 		int data = -1;
+		int money =0;
 		while (data != 0) {
 			data = scanner.nextInt();
 			switch (data) {
 			case 0:
-				break;
+			break;
 			}
 		}
 	}

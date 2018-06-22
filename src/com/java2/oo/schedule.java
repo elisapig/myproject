@@ -1,6 +1,10 @@
 package com.java2.oo;
 	
-	import java.util.ArrayList;
+	import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 	import java.util.List;
 	import java.util.Scanner;
 
@@ -25,7 +29,7 @@ package com.java2.oo;
 			System.out.println("請輸入時(0~24):");
 			int hour = scanner.nextInt();
 			boolean avail = true;
-			for(Couese c : courses){
+			for(Course c : courses){
 				if(!c.isAvailable(weekday,hour)){
 					System.out.println("[有課:"+c.getId+" "+c.getName+" 到"+(c.getWeekday+c.ge);
 					avail = false;
@@ -38,7 +42,28 @@ package com.java2.oo;
 			
 		
 		
+		public void readCourses() {
+			try {
+				BufferedReader in = new BufferedReader(new FileReader("schedule.txt"));
+				String line = in.readLine();
+				while(line!=null) {
+					String tockens =Integer.parseInt(tockens[0]);
+					
+				}
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}catch (IOException e) {
+				e.printStackTrace();
+			}
+				
+			
+		}}
 
+
+		private void readCourses() {
+			new Main();
+			
+		}
 
 
 		public static void main(String[] args) {

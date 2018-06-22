@@ -12,9 +12,9 @@ public class VendingMain {
 		//讀取鍵盤輸入 BufferedReader buf  =  new BufferdReader (new InputStreamReader(System.in));
 		//readLine() 讀取檔案每行資料 傳回為String 自動刪除跳行符號回此字會湊在一起
 		VendingMachine vm = new VendingMachine();
-		FileReader fr;
+		
 		try {
-			fr = new FileReader("vending.txt");
+			FileReader fr = new FileReader("vending.txt");
 			BufferedReader in = new BufferedReader(fr);//讀取"vending.txt"
 			String line = in.readLine();
 			String[] tokens = line.split(",");//代號以，作分類

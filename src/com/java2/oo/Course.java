@@ -7,7 +7,7 @@ public class Course {
 	int hour;
 	int duration;
 	
-	public Course(String name, String id, int weekday, int time, int duration) {
+	public Course(String name, String id, int weekday, int hour, int duration) {
 		super();
 		this.name = name;
 		this.id = id;
