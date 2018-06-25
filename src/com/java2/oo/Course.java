@@ -1,13 +1,15 @@
 package com.java2.oo;
 
 public class Course {
-	String name;
+	
 	String  id;
+	String name;
 	int weekday;
 	int hour;
 	int duration;
 	
-	public Course(String name, String id, int weekday, int hour, int duration) {
+	
+	public Course( String id,String name, int weekday, int hour, int duration) {
 		super();
 		this.name = name;
 		this.id = id;
@@ -45,5 +47,10 @@ public class Course {
 	public void setDuration(int duration) {
 		this.duration = duration;
 	}
+	public boolean isAvailable(int weekday2, int hour2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
 	
 }

@@ -1,72 +1,77 @@
 package com.java2.oo;
 
+import java.util.List;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
-
+/*25代表有5X5共25顆球，產生時就給亂數排列出來
+ * 如下:
+ *  5 10 11  8 25
+ * 13  6 21  4  1
+ * 22 15 23 19  7
+ *  2 20 18  3 14
+ * 17  9 12 24 16 
+ * bingo.txt:25
+ * 8,4,7,18,21,3,5,1,9,10
+ */
 public class Bingo{
-	public static void main(String[] args) {
-	int ary,chsd,chsdval,tmp;
-	
-	
-	Random rd = new Random();
-	FileReader fr;
-	BufferedReader br;
-	ArrayList<Integer> ushs,bgo;
-	//使用者選中的賓果號碼,整張賓果卡
-
-	//將讀取的第一行轉進int,被選擇交換的矩陣元素編號,被選擇交換的矩陣元素數值,暫存編號i數值
-	try {
-		fr = new FileReader("bingo.txt");
-		br = new BufferedReader(fr);
-		ary =Integer.parseInt(br.readLine());
-		System.out.println(ary);
-		
-		String[] usrchs = br.readLine().split(",");
-		ArrayList<Integer> uchs = new ArrayList<Integer>();
-		for(int i=0;i<usrchs.length;i++) {
-			uchs.add(Integer.parseInt(usrchs[i]));
-			
-			
+	public Bingo() {
+		FileReader fr;
+		try {
+//			bingi表格
+			fr = new FileReader("bingo.txt");
+			BufferedReader in = new BufferedReader(fr);
+			String line = in.readLine();
+			int number = Integer.parseInt(line);
+			int table =(int) Math.sqrt(number);
+			String token[] = line.split(",");
+			List<Integer> ans = new ArrayList<>();
+			for(int i = 0 ;i<=token.length-1;i++) {
+				int an = Integer.parseInt(token[i]);
+				ans.add(an);
+			}
+			Table tb = new Table(table, number, ans);
+			tb.print();
+			tb.bingo();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		System.out.println(uchs);
-		//int bgo[] = new int[]{};
-		bgo = new ArrayList<Integer>();
-		for(int i=1; i<ary+1;i++) {
-		bgo.add(i);
-	}
-	//洗牌
-	for(int i=0;i<bgo.size();i++) {
-		chsd =rd.nextInt(ary-1);
-		chsdval = bgo.get(chsd);
-		tmp = bgo.get(i);
-		bgo.set(i, chsdval);
-		bgo.set(chsd, tmp);
 		
 		
+		
+				
 	}
-	for (int i = 0; i < bgo.size(); i++) {
-		int n = bgo.get(i);
-		if(n<10){
-			System.out.print(" ");
+		public static void main(String[] args) {
+	        new Bingo(); 
+//			Random r = new Random();
+//			int list[] = new int[25 + 1];
+//			for (int i = 1; i <= 25; i++) {
+//				list[i] = i;
+//			}
+//			for (int i = 0; i < list.length; i++) {
+//				int j = r.nextInt((25) + 1);
+//				// card[i]<->card[j]
+//				int tmp = list[i];
+//				list[i] = list[j];
+//				list[j] = tmp;
+//			}
+//			for (int i = 1; i <= list.length; i++) {
+//				int y = list[i];
+//				if (i % 5 == 0) {
+//					System.out.println(y);
+//				} else {
+//					System.out.print(y + "\t");
+//				}
+	//
+	//
+//			}
 		}
-		System.out.print(n<10?" ":" ");
-		System.out.print(n);
-		if((i+1)%5==0){
-			System.out.println();
-		
 	}
-	}
-	System.out.println(bgo.indexOf(uchs.get(0)));
-	String[] ar = br.readLine().split(",");
-	}catch(Exception e) {
-		System.out.println(e);
-	}
-	}
-	private static int bgo(int index) {
 
-		return 0;
-
-}
-}

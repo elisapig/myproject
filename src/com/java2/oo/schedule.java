@@ -31,7 +31,7 @@ import java.util.ArrayList;
 			boolean avail = true;
 			for(Course c : courses){
 				if(!c.isAvailable(weekday,hour)){
-					System.out.println("[有課:"+c.getId+" "+c.getName+" 到"+(c.getWeekday+c.ge);
+					System.out.println("[有課:"+c.getId()+" "+c.getName()+" 到"+(c.getWeekday()+c.hour)+c.duration);
 					avail = false;
 					break;
 				}
@@ -47,7 +47,7 @@ import java.util.ArrayList;
 				BufferedReader in = new BufferedReader(new FileReader("schedule.txt"));
 				String line = in.readLine();
 				while(line!=null) {
-					String tockens =Integer.parseInt(tockens[0]);
+					String Id =Integer.parseInt(tockens[0]);
 					
 				}
 			} catch (FileNotFoundException e) {
@@ -60,10 +60,12 @@ import java.util.ArrayList;
 		}}
 
 
+
 		private void readCourses() {
-			new Main();
+			// TODO Auto-generated method stub
 			
 		}
+
 
 
 		public static void main(String[] args) {
