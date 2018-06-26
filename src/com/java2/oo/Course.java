@@ -47,8 +47,7 @@ public class Course {
 	public void setDuration(int duration) {
 		this.duration = duration;
 	}
-	public boolean isAvailable(int weekday2, int hour2) {
-		// TODO Auto-generated method stub
+	
 		return false;
 	}
 	

@@ -42,13 +42,18 @@ import java.util.ArrayList;
 			
 		
 		
-		public void readCourses() {
+		public void readcourses() {
 			try {
 				BufferedReader in = new BufferedReader(new FileReader("schedule.txt"));
 				String line = in.readLine();
 				while(line!=null) {
-					String Id =Integer.parseInt(tockens[0]);
+					String[] tockens;
+					String id =tockens[0];
+					String name = tockens[1];
+					int weekday1 =Integer.parseInt(tokens[2]);
 					
+					
+							
 				}
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
@@ -61,7 +66,7 @@ import java.util.ArrayList;
 
 
 
-		private void readCourses() {
+		void readCourses() {
 			// TODO Auto-generated method stub
 			
 		}
